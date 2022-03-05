@@ -4,6 +4,9 @@
 
 
 <h2 align="center">Pronote GUI</h2>
+
+<h4 align="center">** With NodeJs and Python **</h4>
+<br/>
 <br/>
 
 ## Don't forget to change the "ent.json" file with your information
