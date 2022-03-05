@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="fr" >
+
+<head>
+  <title>Connexion Pronote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="js/scripts.js"></script>
+</head>
+
+<body id="body" class="body">
+	
+<div class="login-page">
+  <div class="form">
+
+    <form>
+
+      
+
+      <img style="justify-content: center;" src="images/pronote.png" alt="Pronote logo">
+      <p id="info" class="info" style="margin-top: 50px;">Veuillez rentrez vos identifiants de l'ent pour vous connecter a Pronote.</p>
+      <input id="user"  type="text" placeholder="&#xf007;  Identifiant"/>
+      <input id="passwd" type="password" placeholder="&#xf023;  Mot de passe">
+      
+      <br>
+      <br>
+
+      
+    </form>
+    <button id="btn" onclick="login()">Se connecter</button>
+    <br>
+
+    <p id="message" class="message"></p>
+
+  </div>
+  
+</div>
+
+<script>
+  var user = document.getElementById("user");
+  user.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+     event.preventDefault();
+     document.getElementById("btn").click();
+    }
+  });
+  var passwd = document.getElementById("passwd");
+  passwd.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+     event.preventDefault();
+     document.getElementById("btn").click();
+    }
+  });
+</script>
+
+</body>
+</html>
+
