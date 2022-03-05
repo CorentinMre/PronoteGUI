@@ -1,5 +1,6 @@
 
 {
     "pronoteUrl": "https://demo.index-education.net/pronote/mobile.eleve.html",
-    "cookiesUrl": "https://ent.l-educdenormandie.fr"
+    "cookiesUrl": "https://ent.l-educdenormandie.fr",
+    "function_on_ent_py": "l_normandie"
 }

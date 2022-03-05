@@ -23,13 +23,14 @@ function createWindow () {
 
   
   //to send the values ​​of the user entered on the login window
-  var user = document.getElementById("user").value
-  var passwd = document.getElementById("passwd").value
+  var user = document.getElementById("user").value;
+  var passwd = document.getElementById("passwd").value;
+  var function_on_ent_py = ent["function_on_ent_py"];
 
   //python script options
   var options = {
     scriptPath : path.join(__dirname, '../engine/'),
-    args : [user,passwd]
+    args : [user,passwd,function_on_ent_py]
   }
 
 

@@ -7,6 +7,7 @@ from urllib.parse import urlparse, parse_qs
 
 user = sys.argv[1]
 passwd = sys.argv[2]
+function_on_ent_py = sys.argv[3]
 
 @typing.no_type_check
 def educonnect(url: str, session, username: str, password: str):
@@ -753,4 +754,4 @@ def l_normandie(username:str,password:str):
 
 
 
-print(l_normandie(user,passwd).get_dict())
+print(eval(function_on_ent_py)(user,passwd).get_dict())
