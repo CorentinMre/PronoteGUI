@@ -48,3 +48,9 @@ Clone the repo, and then
 - `pip install -r requirements.txt`
 - `npm install`
 - `npm start`
+
+And if you want to create an executable:
+
+- `npm run build-win` for Windows
+- `npm run build-linux` for Linux
+- `npm run build-mac` for Mac
