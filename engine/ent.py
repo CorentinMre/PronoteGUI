@@ -753,4 +753,7 @@ def l_normandie(username:str,password:str):
     return requests.utils.cookiejar_from_dict(requests.utils.dict_from_cookiejar(session.cookies))
 
 
-print(eval(function_on_ent_py)(user,passwd).get_dict())
+try:
+    print(eval(function_on_ent_py)(user,passwd).get_dict())
+except:
+    print("ERROR")
