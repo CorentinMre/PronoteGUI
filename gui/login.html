@@ -27,18 +27,21 @@
       
       <br>
       <br>
-
+      
     </form>
-    <button id="btn" onclick="login()">Se connecter</button>
-    <br>
 
-    <p id="message" class="message"></p>
+    <button id="btn" onclick="login()">Se connecter</button>
+
+    <p id="message"></p>
+
+    <div id="loader" class="lds-dual-ring"></div>
 
   </div>
   
 </div>
 
 <script>
+
   var user = document.getElementById("user");
   user.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
