@@ -9,15 +9,13 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
 
-
-
 let mainWindow
 
 function createWindow () {
 
   //first window settings
-  let WINDOW_WIDTH = 1575;
-  let WINDOW_HEIGHT = 865;
+  let WINDOW_WIDTH = 1350;
+  let WINDOW_HEIGHT = 760;
   let bounds = electron.screen.getPrimaryDisplay().bounds;
   let x = bounds.x + ((bounds.width - WINDOW_WIDTH) / 2);
   let y = bounds.y + ((bounds.height - WINDOW_HEIGHT) / 2);
