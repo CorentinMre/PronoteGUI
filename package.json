@@ -4,13 +4,26 @@
   "description": "GUI for Pronote",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-linux": "electron-packager . pronote-gui --overwrite --asar=true --platform=linux --arch=x64 --icon=gui/images/icon.png --prune=true --out=release-builds",
+    "build-win": "electron-packager . pronote-gui --overwrite --asar=true --platform=win32 --arch=ia32 --icon=gui/images/icon.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='GUI for Pronote'",
+    "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=gui/images/icon.png --prune=true --out=release-builds"
   },
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^1.8.4"
   },
   "dependencies": {
+    "electron-packager": "^15.4.0",
     "python-shell": "^1.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorentinMre/PronoteGUI.git"
+  },
+  "author": "CorentinMre",
+  "bugs": {
+    "url": "https://github.com/CorentinMre/PronoteGUI/issues"
+  },
+  "homepage": "https://github.com/CorentinMre/PronoteGUI#readme"
 }
