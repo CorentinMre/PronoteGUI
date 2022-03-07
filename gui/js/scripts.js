@@ -1,7 +1,8 @@
 //dependencies
 const electron = require('electron');
 let {PythonShell} = require('python-shell');
-const path = require('path')
+const path = require('path');
+const { type } = require('os');
 let ent = require(path.join(__dirname, '../ent.json'));
 
 const BrowserWindow = electron.remote.BrowserWindow;
@@ -15,8 +16,8 @@ function createWindow () {
 
 
   //second window settings
-  let WINDOW_WIDTH = 1575;
-  let WINDOW_HEIGHT = 865;
+  let WINDOW_WIDTH = 1350;
+  let WINDOW_HEIGHT = 760;
   let bounds = electron.screen.getPrimaryDisplay().bounds;
   let x = bounds.x + ((bounds.width - WINDOW_WIDTH) / 2);
   let y = bounds.y + ((bounds.height - WINDOW_HEIGHT) / 2);
@@ -38,35 +39,56 @@ function createWindow () {
 
   //script execution to get account cookies, cookies are of type string in the "message" variable
   let pyshell = new PythonShell('ent.py', options);
-  pyshell.on('message', function(message) {
   
-  //transform cookies from type srting to type dict
-  let cook = eval('(' + message + ')');
+  pyshell.on('message', function(message) {
 
-  //hide the first window
-  electron.remote.getCurrentWindow().hide()
+  //hide loader
+  document.getElementById("loader").style.display = "none";
+  
+  if(message != "ERROR"){
 
-  //creation of the second window (pronote)
-  mainWindow = new BrowserWindow({width: WINDOW_WIDTH, height: WINDOW_HEIGHT, x: x, y: y, resizable: false,webPreferences: {nodeIntegration: false},});
-  //clear the menu bar
-  mainWindow.setMenu(null);
-  //implement cookies to the app
-  for (const [key, value] of Object.entries(cook)) {
-    session.defaultSession.cookies.set({url: ent["cookiesUrl"] , name : key, value: value,secure:true},err=>{
-      if(err) console.log("Err "+err)
+  
 
-    })}
-  //load the student's pronote url
-  mainWindow.loadURL(ent["pronoteUrl"]); 
-  //if the application is closed all windows close
-  mainWindow.on('closed', function () {
-    //closing windows
-    window.close()
-  })})
+    //transform cookies from type srting to type dict
+    let cook = eval('(' + message + ')')
+
+
+    //hide the first window
+    electron.remote.getCurrentWindow().hide()
+
+    //creation of the second window (pronote)
+    mainWindow = new BrowserWindow({width: WINDOW_WIDTH, height: WINDOW_HEIGHT, x: x, y: y, resizable: false,webPreferences: {nodeIntegration: false},});
+    //clear the menu bar
+    mainWindow.setMenu(null);
+    //implement cookies to the app
+    for (const [key, value] of Object.entries(cook)) {
+      session.defaultSession.cookies.set({url: ent["cookiesUrl"] , name : key, value: value,secure:true},err=>{
+        if(err) console.log("Err "+err)
+
+      })}
+    //load the student's pronote url
+    mainWindow.loadURL(ent["pronoteUrl"]); 
+    //if the application is closed all windows close
+    mainWindow.on('closed', function () {
+      //closing windows
+      window.close()
+    })
+  }else{
+
+    //display ERROR
+    document.getElementById("message").innerText = "ERREUR DE SAISIE... (◡_◡)";
+  }
+  
+
+  })
 
 }
 
 function login(){
+  
+  //display loader and delete the text
+  document.getElementById("message").innerText = "";
+  document.getElementById("loader").style.display = "inline-block";
 
   //creation of the second window (pronote), its execution is done as soon as the user clicks on "se connecter" on the login page
   createWindow();
