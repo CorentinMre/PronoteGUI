@@ -27,7 +27,7 @@
 
 This project uses [Node](https://nodejs.org/en/download/)
 
-## Dependenices for Node
+## Dependenices for NodeJs
 
 - NodeJS
 - Electron   
