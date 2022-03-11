@@ -1,5 +1,5 @@
 <p align="center"><img width="250" alt="Pronote GUI" src="gui/images/icon.png"></a></p>
-<p align="center"><strong>Pronote GUI</strong> est utile pour les étudiants qui souhaitent accéder rapidement à <strong>Pronote</strong></p>
+<p align="center"><strong>Pronote GUI</strong> est une application de bureau pour vous connecter à <strong>Pronote</strong>.<br>Utile pour les étudiants voulant un accès rapide à <strong>Pronote</strong>.</p>
 <br/>
 
 
@@ -11,8 +11,7 @@
 
 ## N'oubliez pas de modifier le fichier "ent.json" avec vos informations
 
-
-- Vous pouvez utiliser "mobile.eleve.html" à la fin de "pronoteUrl" pour une application plus facile à utiliser, mais si vous voulez une application de thème de navigateur Web, vous pouvez simplement utiliser "eleve.html". Pour "cookiesUrl" vous devez mettre l'url qui recevra vos cookies de session pour vous connecter à pronote. Et "function_on_ent_py" est le nom de la fonction à utiliser dans le fichier 'engine/ent.py'
+- Vous pouvez utiliser `mobile.eleve.html` à la fin de `pronoteUrl` pour une application plus facile à utiliser, mais si vous voulez une application de thème de navigateur Web, vous pouvez simplement utiliser `eleve.html`. Pour `cookiesUrl` vous devez mettre l'url qui recevra vos cookies de session pour vous connecter à pronote. Et `function_on_ent_py` est le nom de la fonction à utiliser dans le fichier `engine/ent.py`
 - Exemple:
 
 ```json
@@ -22,10 +21,6 @@
     "function_on_ent_py": "l_normandie"
 }
 ```
-
-## Note
-
-Ce projet utilise [NodeJs](https://nodejs.org/fr/download/)
 
 ## Dépendances pour NodeJs
 

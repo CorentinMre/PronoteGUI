@@ -1,11 +1,11 @@
 <p align="center"><img width="250" alt="Pronote GUI" src="gui/images/icon.png"></a></p>
-<p align="center"><strong>Pronote GUI</strong> is useful for students wanting quick access to <strong>Pronote</strong></p>
+<p align="center"><strong>Pronote GUI</strong> is a desktop application to connect to <strong>Pronote</strong>.<br>Useful for students wanting quick access to <strong>Pronote</strong>.</p>
 <br/>
 
 
 <h2 align="center">Pronote GUI</h2>
 
-<h4 align="center">** With NodeJs and Python **</h4>
+<h4 align="center">** With <a target="_blank" href="https://nodejs.org/en/download/">NodeJs</a> and <a target="_blank" href="https://www.python.org/">Python</a> **</h4>
 <br/>
 <br/>
 
