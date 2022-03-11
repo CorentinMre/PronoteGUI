@@ -27,7 +27,7 @@
 
 Ce projet utilise [NodeJs](https://nodejs.org/fr/download/)
 
-## Dépendances pour Node
+## Dépendances pour NodeJs
 
 - NodeJS
 - Electron   
