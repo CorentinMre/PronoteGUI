@@ -9,7 +9,7 @@
 <br/>
 <br/>
 
-## Don't forget to change the "ent.json" file with your information
+## N'oubliez pas de modifier le fichier "ent.json" avec vos informations
 
 
 - Vous pouvez utiliser "mobile.eleve.html" à la fin de "pronoteUrl" pour une application plus facile à utiliser, mais si vous voulez une application de thème de navigateur Web, vous pouvez simplement utiliser "eleve.html". Pour "cookiesUrl" vous devez mettre l'url qui recevra vos cookies de session pour vous connecter à pronote. Et "function_on_ent_py" est le nom de la fonction à utiliser dans le fichier 'engine/ent.py'
