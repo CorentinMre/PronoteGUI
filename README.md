@@ -5,7 +5,7 @@
 
 <h2 align="center">Pronote GUI</h2>
 
-<h4 align="center">** Avec NodeJs et Python **</h4>
+<h4 align="center">** Avec <a href="https://nodejs.org/fr/download/">NodeJs</a> et <a href="https://www.python.org/">Python</a> **</h4>
 <br/>
 <br/>
 
