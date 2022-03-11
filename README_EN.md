@@ -23,10 +23,6 @@
 }
 ```
 
-## Note
-
-This project uses [Node](https://nodejs.org/en/download/)
-
 ## Dependenices for NodeJs
 
 - NodeJS
