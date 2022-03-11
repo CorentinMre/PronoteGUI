@@ -12,7 +12,7 @@
 ## Don't forget to change the "ent.json" file with your information
 
 
-- You can use "mobile.eleve.html" at the end of "pronoteUrl" for an easier to use app, but if you want a web browser theme app, you can just use "eleve.html". For "cookiesUrl" you must put the url that will receive your session cookies to connect to pronote. And "function_on_ent_py" is the name of the function to use in the 'engine/ent.py' file
+- You can use `mobile.eleve.html` at the end of `pronoteUrl` for an easier to use app, but if you want a web browser theme app, you can just use `eleve.html`. For `cookiesUrl` you must put the url that will receive your session cookies to connect to pronote. And `function_on_ent_py` is the name of the function to use in the `engine/ent.py` file
 - Example:
 
 ```json
